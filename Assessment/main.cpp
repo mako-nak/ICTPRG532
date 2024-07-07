@@ -3,7 +3,7 @@
 
 class Vehicle {
 public:
-    virtual void park() = 0; // Abstract method to be overridden
+    virtual void park() = 0;
     virtual ~Vehicle() {}
     std::string type;
 };
@@ -60,7 +60,7 @@ public:
         while (current) {
             if (current->vehicle == vehicle) {
                 if (current->prev) current->prev->next = current->next;
-                if (current->next) current->next->prev = current->prev; // Corrected syntax
+                if (current->next) current->next->prev = current->prev; 
                 if (current == head) head = current->next;
                 if (current == tail) tail = current->prev;
                 delete current;
